@@ -91,6 +91,19 @@ const updateBook = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+const getCategories = async (req, res) => {
+  try {
+
+    const categories = await Book.distinct("category");
+
+    res.json(categories);
+
+  } catch (error) {
+
+    res.status(500).json({ message: error.message });
+
+  }
+};
 
 // Delete Book
 const deleteBook = async (req, res) => {
@@ -114,5 +127,6 @@ module.exports = {
   getBooks,
   getBookById,
   updateBook,
+  getCategories,
   deleteBook
 };
