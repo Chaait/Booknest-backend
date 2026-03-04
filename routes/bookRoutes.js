@@ -12,6 +12,7 @@ const {
 const { protect,adminOnly } = require("../middleware/authMiddleware");
 
 // Public routes
+router.get("/categories", getCategories);
 router.get("/", getBooks);
 router.get("/:id", getBookById);
 
