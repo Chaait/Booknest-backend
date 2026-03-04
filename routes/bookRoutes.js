@@ -5,6 +5,7 @@ const {
   addBook,
   getBooks,
   getBookById,
+  getCategories,
   updateBook,
   deleteBook
 } = require("../controllers/bookController");
